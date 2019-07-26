@@ -4,25 +4,21 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Reptile: Animals, ISpeed
+    public class Reptile
     {
-        public Reptile(string name) : base(name)
+        private string name;
+        public string Name
         {
+            get { return name; }
+            set { name = value; }
 
         }
-        private int speed;
-        public int Speed
+        public Reptile(string name) 
         {
-            get { return speed; }
-            set { speed = value; }
+            Name = name;
+            
         }
+        
 
-        public void Run()
-        {
-            if(Name == "Snake")
-            {
-                Console.WriteLine($"I am a {Name} and i crawl with {Speed} km/h.");
-            }
-        }
     }
 }

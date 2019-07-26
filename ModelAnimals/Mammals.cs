@@ -4,28 +4,22 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Mammals: Animals, ISpeed
+    public class Mammals
     {
-        private int speed;
-        public Mammals(string name) : base(name)
+        private string name;
+        public string Name
         {
+            get { return name; }
+            set { name = value; }
 
         }
-
-        public int Speed
+        
+        public Mammals(string name) 
         {
-            get { return speed; }
-            set { speed = value; }
-        }
-
-        public void Run()
-        {
-            if(Name == "Platypus")
-            {
-                
-                Console.WriteLine($"I am a {Name} and i walk and swim with {Speed} km/h.");
-            }
+            Name = name;
             
         }
+
+       
     }
 }

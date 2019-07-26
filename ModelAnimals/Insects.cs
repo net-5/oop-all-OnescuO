@@ -4,25 +4,22 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Insects: Animals, ISpeed
+    public class Insects
     {
-        public Insects(string name) : base(name)
+        private string name;
+        public string Name
         {
+            get { return name; }
+            set { name = value; }
 
         }
-        private int speed;
-        public int Speed
+        public Insects(string name)
         {
-            get { return speed; }
-            set { speed = value; }
+            Name = name;
+            
         }
+        
 
-        public void Run()
-        {
-            if(Name == "Butterfly")
-            {
-                Console.WriteLine($"I am a {Name} and I can fly with {Speed} km/h.");
-            }
-        }
+       
     }
 }

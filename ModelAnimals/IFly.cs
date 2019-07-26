@@ -4,9 +4,8 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public interface ISpeed
+    interface IFly
     {
-        int Speed { get; set; }
-        void Run();
+        void Fly();
     }
 }
